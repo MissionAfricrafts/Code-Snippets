@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Palindrome Checker</title>
+        <script>
+            function isPalidnrome(pharse){
+                // With built-in functions
+                let reverseString = pharse.split("").reverse().join("")
+                // With Decrement For Loop
+                let reverseString = ""
+                for(let index = pharse.length - 1; index >= 0; index--){
+                    reverseString += pharse[index]
+                }
+                if(pharse === reverseString)
+                    return true
+                else
+                    return false
+            }
+            function check(pharse,shouldBePalindrome){
+                console.log(isPalidnrome(pharse) === shouldBePalindrome ? 'PASS' : 'FAIL')
+            }
+        </script>
+    </head>
+    <body>
+        <h4>Palindrome Checker</h4>
+        <input type='button' value="Check" onclick="check('abcba',true)" />
+    </body>
+</html>
